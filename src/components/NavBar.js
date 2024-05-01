@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import Logo from './Logo'
 
 const NavBar = () => {
   return (
@@ -10,15 +11,30 @@ const NavBar = () => {
         <Link href='/projects'>Projects</Link>
         <Link href='/articles'>Articles</Link>
       </nav>
-      <h2>Logo</h2>
+
       <nav>
-        <Link href='/' target={'_blank'}>X</Link>
-        <Link href='/' target={'_blank'}>L</Link>
-        <Link href='/' target={'_blank'}>G</Link>
-        <Link href='/' target={'_blank'}>I</Link>
-        <Link href='/' target={'_blank'}>B</Link>
-        <Link href='/' target={'_blank'}>D</Link>
+        <Link href='/' target={'_blank'}>
+          X
+        </Link>
+        <Link href='/' target={'_blank'}>
+          L
+        </Link>
+        <Link href='/' target={'_blank'}>
+          G
+        </Link>
+        <Link href='/' target={'_blank'}>
+          I
+        </Link>
+        <Link href='/' target={'_blank'}>
+          B
+        </Link>
+        <Link href='/' target={'_blank'}>
+          D
+        </Link>
       </nav>
+      <div className='absolute left-[50%] top-2 translate-x-[-50%]'>
+        <Logo />
+      </div>
     </header>
   )
 }
