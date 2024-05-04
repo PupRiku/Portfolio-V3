@@ -50,7 +50,7 @@ const Project = ({ type, title, img, link, github }) => {
   return (
     <div>
       <article className='relative flex w-full flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6'>
-      <div className='absolute -right-3 top-0 -z-10 h-[103%] w-[100.82%] rounded-[2rem] rounded-br-3xl bg-dark' />
+        <div className='absolute -right-3 top-0 -z-10 h-[103%] w-[100.82%] rounded-[2rem] rounded-br-3xl bg-dark' />
         <Link
           href={link}
           target='_blank'
