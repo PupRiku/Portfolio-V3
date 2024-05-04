@@ -6,10 +6,10 @@ const MotionLink = motion(Link)
 
 const Logo = () => {
   return (
-    <div className='flex items-center justify-center mt-2'>
+    <div className='mt-2 flex items-center justify-center'>
       <MotionLink
         href='/'
-        className='w-16 h-16 bg-dark text-light flex items-center justify-center rounded-full text-2xl font-bold'
+        className='flex h-16 w-16 items-center justify-center rounded-full bg-dark text-2xl font-bold text-light'
         whileHover={{
           backgroundColor: [
             '#121212',

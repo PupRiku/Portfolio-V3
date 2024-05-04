@@ -68,12 +68,12 @@ const about = () => {
                 your next project.
               </p>
             </div>
-            <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8'>
-              <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark' />
+            <div className='relative col-span-3 h-max rounded-2xl border-2 border-solid border-dark bg-light p-8'>
+              <div className='absolute -right-3 top-0 -z-10 h-[103%] w-[102%] rounded-[2rem] bg-dark' />
               <Image
                 src={profilePic}
                 alt='Chris Diorio'
-                className='w-full h-auto rounded-2xl'
+                className='h-auto w-full rounded-2xl'
               />
             </div>
             <div className='col-span-2 flex flex-col items-end justify-between'>

@@ -15,10 +15,10 @@ const CustomLink = ({ href, title, className = '' }) => {
   const router = useRouter()
 
   return (
-    <Link href={href} className={`${className} relative group`}>
+    <Link href={href} className={`${className} group relative`}>
       {title}
       <span
-        className={`h-[1px] inline-block bg-dark left-0 -bottom-0.5 absolute group-hover:w-full transition-[width] ease duration-300 ${router.asPath === href ? 'w-full' : 'w-0'}`}
+        className={`ease absolute -bottom-0.5 left-0 inline-block h-[1px] bg-dark transition-[width] duration-300 group-hover:w-full ${router.asPath === href ? 'w-full' : 'w-0'}`}
       >
         &nbsp;
       </span>
@@ -28,7 +28,7 @@ const CustomLink = ({ href, title, className = '' }) => {
 
 const NavBar = () => {
   return (
-    <header className='w-full px-32 py-8 font-medium flex items-center justify-between'>
+    <header className='flex w-full items-center justify-between px-32 py-8 font-medium'>
       <nav>
         <CustomLink href='/' title='Home' className='mr-4' />
         <CustomLink href='/about' title='About' className='mx-4' />
@@ -36,13 +36,13 @@ const NavBar = () => {
         <CustomLink href='/articles' title='Articles' className='ml-4' />
       </nav>
 
-      <nav className='flex items-center justify-center flex-wrap'>
+      <nav className='flex flex-wrap items-center justify-center'>
         <motion.a
           href='https://twitter.com'
           target={'_blank'}
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
-          className='w-6 mr-3'
+          className='mr-3 w-6'
         >
           <TwitterIcon />
         </motion.a>
@@ -51,7 +51,7 @@ const NavBar = () => {
           target={'_blank'}
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
-          className='w-6 mx-3'
+          className='mx-3 w-6'
         >
           <GithubIcon />
         </motion.a>
@@ -60,7 +60,7 @@ const NavBar = () => {
           target={'_blank'}
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
-          className='w-6 mx-3'
+          className='mx-3 w-6'
         >
           <LinkedInIcon />
         </motion.a>
@@ -69,7 +69,7 @@ const NavBar = () => {
           target={'_blank'}
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
-          className='w-6 mx-3'
+          className='mx-3 w-6'
         >
           <PinterestIcon />
         </motion.a>
@@ -78,7 +78,7 @@ const NavBar = () => {
           target={'_blank'}
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
-          className='w-6 ml-3'
+          className='ml-3 w-6'
         >
           <DribbbleIcon />
         </motion.a>

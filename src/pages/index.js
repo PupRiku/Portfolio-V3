@@ -15,20 +15,20 @@ export default function Home() {
         <title>Chris Diorio</title>
         <meta name='description' content='Portfolio for Chris Diorio' />
       </Head>
-      <main className='flex items-center text-dark w-full min-h-screen'>
+      <main className='flex min-h-screen w-full items-center text-dark'>
         <Layout className='pt-0'>
-          <div className='flex items-center justify-between w-full'>
+          <div className='flex w-full items-center justify-between'>
             <div className='w-1/2'>
               <Image
                 src={profilePic}
                 alt='Chris Diorio'
-                className='w-full h-auto'
+                className='h-auto w-full'
               />
             </div>
-            <div className='w-1/2 flex flex-col items-center self-center'>
+            <div className='flex w-1/2 flex-col items-center self-center'>
               <AnimatedText
                 text='Turning Vision Into Reality With Code And Design.'
-                className='!text-6xl !text-left'
+                className='!text-left !text-6xl'
               />
               <p className='my-4 text-base font-medium'>
                 As a skilled full-stack developer, I am dedicated to turning
@@ -36,14 +36,14 @@ export default function Home() {
                 projects and articles, showcasing my expertise in React.js and
                 web development.
               </p>
-              <div className='flex items-center self-start mt-2'>
+              <div className='mt-2 flex items-center self-start'>
                 <Link
                   href='/dummy.pdf'
                   target={'_blank'}
-                  className='flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark'
+                  className='flex items-center rounded-lg border-2 border-solid border-transparent bg-dark p-2.5 px-6 text-lg font-semibold text-light hover:border-dark hover:bg-light hover:text-dark'
                   download={true}
                 >
-                  Resume <LinkArrow className={'w-6 ml-1'} />
+                  Resume <LinkArrow className={'ml-1 w-6'} />
                 </Link>
                 <Link
                   href='mailto:chris.diorio12@gmail.com'
@@ -57,8 +57,8 @@ export default function Home() {
           </div>
         </Layout>
         <HireMe />
-        <div className='absolute right-8 bottom-8 inline-block w-24'>
-          <Image src={lightbulb} alt='Chris Diorio' className='w-full h-auto' />
+        <div className='absolute bottom-8 right-8 inline-block w-24'>
+          <Image src={lightbulb} alt='Chris Diorio' className='h-auto w-full' />
         </div>
       </main>
     </>
