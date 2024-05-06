@@ -22,6 +22,8 @@ const useThemeSwitcher = () => {
         let check = mediaQuery.matches ? 'dark' : 'light'
         setMode(check)
 
+        window.localStorage.setItem('theme', check)
+
         if (check === 'dark') {
           document.documentElement.classList.add('dark')
         } else {
@@ -29,6 +31,8 @@ const useThemeSwitcher = () => {
         }
       }
     }
+
+    handleChange()
 
     mediaQuery.addEventListener('change', handleChange)
 
