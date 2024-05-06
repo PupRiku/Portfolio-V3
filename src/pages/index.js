@@ -15,7 +15,7 @@ export default function Home() {
         <title>Chris Diorio</title>
         <meta name='description' content='Portfolio for Chris Diorio' />
       </Head>
-      <main className='flex min-h-screen w-full items-center text-dark'>
+      <main className='flex min-h-screen w-full items-center text-dark dark:text-light'>
         <Layout className='pt-0'>
           <div className='flex w-full items-center justify-between'>
             <div className='w-1/2'>
@@ -40,7 +40,7 @@ export default function Home() {
                 <Link
                   href='/dummy.pdf'
                   target={'_blank'}
-                  className='flex items-center rounded-lg border-2 border-solid border-transparent bg-dark p-2.5 px-6 text-lg font-semibold text-light hover:border-dark hover:bg-light hover:text-dark'
+                  className='flex items-center rounded-lg border-2 border-solid border-transparent bg-dark p-2.5 px-6 text-lg font-semibold text-light hover:border-dark hover:bg-light hover:text-dark dark:bg-light dark:text-dark hover:dark:border-light hover:dark:bg-dark hover:dark:text-light'
                   download={true}
                 >
                   Resume <LinkArrow className={'ml-1 w-6'} />
@@ -48,7 +48,7 @@ export default function Home() {
                 <Link
                   href='mailto:chris.diorio12@gmail.com'
                   target={'_blank'}
-                  className='ml-4 text-lg font-medium capitalize text-dark underline'
+                  className='ml-4 text-lg font-medium capitalize text-dark underline dark:text-light'
                 >
                   Contact
                 </Link>

@@ -10,8 +10,8 @@ import project2 from '../../../public/images/projects/portfolio-cover-image.jpg'
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
-    <article className='relative flex w-full items-center justify-between rounded-3xl rounded-br-2xl border border-solid border-dark bg-light p-12 shadow-2xl'>
-      <div className='absolute -right-3 top-0 -z-10 h-[103%] w-[100.82%] rounded-[2.5rem] rounded-br-3xl bg-dark' />
+    <article className='relative flex w-full items-center justify-between rounded-3xl rounded-br-2xl border border-solid border-dark bg-light p-12 shadow-2xl dark:border-light dark:bg-dark'>
+      <div className='absolute -right-3 top-0 -z-10 h-[103%] w-[100.82%] rounded-[2.5rem] rounded-br-3xl bg-dark dark:bg-light' />
       <Link
         href={link}
         target='_blank'
@@ -20,23 +20,27 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
         <Image src={img} alt={title} className='h-auto w-full' />
       </Link>
       <div className='flex w-1/2 flex-col items-start justify-between pl-6'>
-        <span className='text-xl font-medium text-primary'>{type}</span>
+        <span className='text-xl font-medium text-primary dark:text-primaryDark'>
+          {type}
+        </span>
         <Link
           href={link}
           target='_blank'
           className='underline-offset-2 hover:underline'
         >
-          <h2 className='my-2 w-full text-left text-4xl font-bold'>{title}</h2>
+          <h2 className='my-2 w-full text-left text-4xl font-bold dark:text-light'>
+            {title}
+          </h2>
         </Link>
-        <p className='my-2 font-medium text-dark'>{summary}</p>
+        <p className='my-2 font-medium text-dark dark:text-light'>{summary}</p>
         <div className='mt-2 flex items-center'>
           <Link href={github} target='_blank' className='w-10'>
-            <GithubIcon />
+            <GithubIcon className={'dark:text-light'} />
           </Link>
           <Link
             href={link}
             target='_blank'
-            className='ml-4 rounded-lg bg-dark p-2 px-6 text-lg font-semibold text-light'
+            className='ml-4 rounded-lg bg-dark p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark'
           >
             Visit Project
           </Link>
@@ -49,8 +53,8 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 const Project = ({ type, title, img, link, github }) => {
   return (
     <div>
-      <article className='relative flex w-full flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6'>
-        <div className='absolute -right-3 top-0 -z-10 h-[103%] w-[100.82%] rounded-[2rem] rounded-br-3xl bg-dark' />
+      <article className='relative flex w-full flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 dark:border-light dark:bg-dark'>
+        <div className='absolute -right-3 top-0 -z-10 h-[103%] w-[100.82%] rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light' />
         <Link
           href={link}
           target='_blank'
@@ -59,13 +63,15 @@ const Project = ({ type, title, img, link, github }) => {
           <Image src={img} alt={title} className='h-auto w-full' />
         </Link>
         <div className='mt-4 flex w-full flex-col items-start justify-between'>
-          <span className='text-xl font-medium text-primary'>{type}</span>
+          <span className='text-xl font-medium text-primary dark:text-primaryDark'>
+            {type}
+          </span>
           <Link
             href={link}
             target='_blank'
             className='underline-offset-2 hover:underline'
           >
-            <h2 className='my-2 w-full text-left text-3xl font-bold'>
+            <h2 className='my-2 w-full text-left text-3xl font-bold dark:text-light'>
               {title}
             </h2>
           </Link>
@@ -73,12 +79,12 @@ const Project = ({ type, title, img, link, github }) => {
             <Link
               href={link}
               target='_blank'
-              className='text-lg font-semibold underline'
+              className='text-lg font-semibold underline dark:text-light'
             >
               Visit
             </Link>
             <Link href={github} target='_blank' className='w-8'>
-              <GithubIcon />
+              <GithubIcon className={'dark:text-light'} />
             </Link>
           </div>
         </div>
