@@ -16,33 +16,33 @@ export default function Home() {
         <meta name='description' content='Portfolio for Chris Diorio' />
       </Head>
       <main className='flex min-h-screen w-full items-center text-dark dark:text-light'>
-        <Layout className='pt-0'>
-          <div className='flex w-full items-center justify-between'>
-            <div className='w-1/2'>
+        <Layout className='pt-0 md:pt-16 sm:pt-8'>
+          <div className='flex w-full items-center justify-between lg:flex-col'>
+            <div className='w-1/2 md:w-full'>
               <Image
                 src={profilePic}
                 alt='Chris Diorio'
-                className='h-auto w-full'
+                className='h-auto w-full lg:hidden md:inline-block md:w-full'
                 priority
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw'
               />
             </div>
-            <div className='flex w-1/2 flex-col items-center self-center'>
+            <div className='flex w-1/2 flex-col items-center self-center lg:w-full lg:text-center'>
               <AnimatedText
                 text='Turning Vision Into Reality With Code And Design.'
-                className='!text-left !text-6xl'
+                className='!text-left !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl'
               />
-              <p className='my-4 text-base font-medium'>
+              <p className='my-4 text-base font-medium md:text-sm sm:text-xs'>
                 As a skilled full-stack developer, I am dedicated to turning
                 ideas into innovative web applications. Explore my latest
                 projects and articles, showcasing my expertise in React.js and
                 web development.
               </p>
-              <div className='mt-2 flex items-center self-start'>
+              <div className='mt-2 flex items-center self-start lg:self-center'>
                 <Link
                   href='/dummy.pdf'
                   target={'_blank'}
-                  className='flex items-center rounded-lg border-2 border-solid border-transparent bg-dark p-2.5 px-6 text-lg font-semibold text-light hover:border-dark hover:bg-light hover:text-dark dark:bg-light dark:text-dark hover:dark:border-light hover:dark:bg-dark hover:dark:text-light'
+                  className='flex items-center rounded-lg border-2 border-solid border-transparent bg-dark p-2.5 px-6 text-lg font-semibold text-light hover:border-dark hover:bg-light hover:text-dark md:p-2 md:px-4 md:text-base dark:bg-light dark:text-dark hover:dark:border-light hover:dark:bg-dark hover:dark:text-light'
                   download={true}
                 >
                   Resume <LinkArrow className={'ml-1 w-6'} />
@@ -50,7 +50,7 @@ export default function Home() {
                 <Link
                   href='mailto:chris.diorio12@gmail.com'
                   target={'_blank'}
-                  className='ml-4 text-lg font-medium capitalize text-dark underline dark:text-light'
+                  className='ml-4 text-lg font-medium capitalize text-dark underline md:text-base dark:text-light'
                 >
                   Contact
                 </Link>
@@ -59,7 +59,7 @@ export default function Home() {
           </div>
         </Layout>
         <HireMe />
-        <div className='absolute bottom-8 right-8 inline-block w-24'>
+        <div className='absolute bottom-8 right-8 inline-block w-24 md:hidden'>
           <Image src={lightbulb} alt='Chris Diorio' className='h-auto w-full' />
         </div>
       </main>
