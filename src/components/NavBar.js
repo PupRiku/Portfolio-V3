@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 import Logo from './Logo'
 import { useRouter } from 'next/router'
 import {
@@ -31,8 +31,28 @@ const CustomLink = ({ href, title, className = '' }) => {
 
 const NavBar = () => {
   const [mode, setMode] = useThemeSwitcher()
+  const [isOpen, setIsOpen] = useState(false)
+
+  const handleClick = () => {
+    setIsOpen(!isOpen)
+  }
+
   return (
     <header className='flex w-full items-center justify-between px-32 py-8 font-medium dark:text-light'>
+      <button
+        className='flex flex-col items-center justify-center'
+        onClick={handleClick}
+      >
+        <span
+          className={`block h-0.5 w-6 rounded-sm bg-dark transition-all duration-300 ease-out dark:bg-light  ${isOpen ? 'translate-y-1 rotate-45' : '-translate-y-0.5'}`}
+        ></span>
+        <span
+          className={`my-0.5 block h-0.5 w-6 rounded-sm bg-dark transition-all duration-300 ease-out dark:bg-light  ${isOpen ? 'opacity-0' : 'opacity-100'}`}
+        ></span>
+        <span
+          className={`block h-0.5 w-6 rounded-sm bg-dark transition-all duration-300 ease-out dark:bg-light  ${isOpen ? '-translate-y-1 -rotate-45' : 'translate-y-0.5'}`}
+        ></span>
+      </button>
       <nav>
         <CustomLink href='/' title='Home' className='mr-4' />
         <CustomLink href='/about' title='About' className='mx-4' />
