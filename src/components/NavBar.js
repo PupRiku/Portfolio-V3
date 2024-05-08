@@ -62,7 +62,7 @@ const NavBar = () => {
   }
 
   return (
-    <header className='relative flex w-full items-center justify-between px-32 py-8 font-medium dark:text-light'>
+    <header className='relative z-10 flex w-full items-center justify-between px-32 py-8 font-medium lg:px-16 md:px-12 sm:px-8 dark:text-light'>
       <button
         className='hidden flex-col items-center justify-center lg:flex'
         onClick={handleClick}
