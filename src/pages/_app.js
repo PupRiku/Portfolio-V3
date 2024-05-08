@@ -3,6 +3,7 @@ import NavBar from '@/components/NavBar'
 import '@/styles/globals.css'
 import { Montserrat } from 'next/font/google'
 import Head from 'next/head'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -21,6 +22,7 @@ export default function App({ Component, pageProps }) {
       >
         <NavBar />
         <Component {...pageProps} />
+        <SpeedInsights />
         <Footer />
       </main>
     </>
