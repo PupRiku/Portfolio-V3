@@ -40,7 +40,7 @@ export default function Home() {
               </p>
               <div className='mt-2 flex items-center self-start lg:self-center'>
                 <Link
-                  href='/dummy.pdf'
+                  href='/Diorio_Resume_v6.pdf'
                   target={'_blank'}
                   className='flex items-center rounded-lg border-2 border-solid border-transparent bg-dark p-2.5 px-6 text-lg font-semibold text-light hover:border-dark hover:bg-light hover:text-dark md:p-2 md:px-4 md:text-base dark:bg-light dark:text-dark hover:dark:border-light hover:dark:bg-dark hover:dark:text-light'
                   download={true}
