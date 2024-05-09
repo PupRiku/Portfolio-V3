@@ -42,25 +42,26 @@ const Education = () => {
         />
         <ul className='ml-4 flex w-full flex-col items-start justify-between'>
           <Details
-            type='Bachelor Of Science In Computer Science'
-            time='2016-2020'
-            place='Massachusetts Institute Of Technology (MIT)'
-            info='Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial 
-            Intelligence.'
+            type='Capstone Certificate In User Experience Design'
+            time='2019-2020'
+            place='University of Wisconsin - Madison'
+            info='Completed coursework in user and market research, methodologies, low and high fidelity prototyping, 
+            and evaluation, resulting in a full prototype capstone project developed throughout the program.'
           />
           <Details
-            type='Master Of Computer Science'
-            time='2020-2022'
-            place='Stanford University'
-            info="Completed a master's project on deep learning, developing a new neural network architecture for natural 
-            language understanding."
+            type='Master Of Science In Human-Computer Interaction'
+            time='2009-2012'
+            place='Rensselaer Polytechnic Institute (RPI)'
+            info='Completed coursework in human-computer interaction with theory in allied areas such as technical 
+            communication, human factors, information design, cognitive science, and computer science'
           />
           <Details
-            type='Online Coursework'
-            time='2016-2020'
-            place='Coursera And EdX'
-            info='Completed coursework in advanced topics such as Reinforcement Learning, Computer Vision, and Machine 
-            Learning Engineering.'
+            type='Bachelor of Science In Games & Simulation Arts & Sciences'
+            time='2007-2012'
+            place='Rensselaer Polytechnic Institute (RPI)'
+            info='Completed coursework in game design, mechanics, theory and development, showcasing a completed team-
+            produced game during the final year. Concentration focus was on the visual and animated elements of games, 
+            with advanced coursework in 3D animation, character modeling, lighting and rendering, and visual effects.'
           />
         </ul>
       </div>
